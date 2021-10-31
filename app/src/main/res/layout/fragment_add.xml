@@ -12,7 +12,7 @@
         android:id="@+id/title_add"
         android:layout_width="322dp"
         android:layout_height="62dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/title_input"
         android:ems="0"
         android:hint="Title"
@@ -20,7 +20,7 @@
         android:padding="20dp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +29,7 @@
         android:layout_width="367dp"
 
         android:layout_height="397dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/title_input"
         android:ems="10"
         android:hint="Description"
@@ -45,43 +45,43 @@
         android:layout_width="242dp"
 
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/title_input"
         android:ems="10"
-        android:hint="Date"
+        android:hint="      /          /      "
         android:inputType="date"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/des_add" />
+
+    <ImageView
+        android:id="@+id/date_button_add"
+        android:layout_width="15dp"
+        android:layout_height="17dp"
+        android:background="#F1ECEC"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintBottom_toBottomOf="@+id/date_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/des_add"
+        app:layout_constraintVertical_bias="0.477" />
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="345dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="78dp"
         android:backgroundTint="#FF7B79"
         android:text="ADD TODO"
         android:textColor="#F8F5F5"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_add" />
-
-    <ImageView
-        android:id="@+id/date_button_add"
-        android:layout_width="22dp"
-        android:layout_height="23dp"
-        android:background="#F1ECEC"
-        android:src="@drawable/ic_baseline_calendar_today_24"
-        app:layout_constraintBottom_toBottomOf="@+id/date_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.73"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/des_add"
-        app:layout_constraintVertical_bias="0.847" />
+        app:layout_constraintTop_toBottomOf="@+id/date_add"
+        app:layout_constraintVertical_bias="0.113" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

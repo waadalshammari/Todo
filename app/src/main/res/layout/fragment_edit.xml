@@ -53,7 +53,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/title_input"
         android:ems="10"
-        android:hint="Date"
+        android:hint="      /          /      "
         android:inputType="date"
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"

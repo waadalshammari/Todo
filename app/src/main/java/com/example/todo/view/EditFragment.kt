@@ -34,13 +34,9 @@ class EditFragment : Fragment() {
     editButton.setOnClickListener {
         val title = titleEditText.text.toString()
         val des = desEditText.text.toString()
-        val date = dateEditText.text.toString()
+        val date = dateEditText.text.toString().toInt()
 
-        if (title.isNotEmpty() && des.isNotEmpty() && date.isNotEmpty() ){
-            // is it ok to put date as string here ??
+        todolistViewModel.addItem(title,des, false ,date)
 
-            findNavController().popBackStack()
-
-        }
     }
 } }

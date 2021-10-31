@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CheckBox
 import android.widget.EditText
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import com.example.todo.R
 
 
@@ -37,14 +35,12 @@ class AddFragment : Fragment() {
         addButton.setOnClickListener {
             val title = titleEditText.text.toString()
             val des = desEditText.text.toString()
-            val date = dateEditText.text.toString()
+            val date = dateEditText.text.toString().toInt()
+           // val dateButton = dateButton
 
             // how i put the date button ?? or i dont need it
 
-            if (title.isNotEmpty() && des.isNotEmpty() && date.isNotEmpty() ){
-                // is it ok to put date as string here ??
-
-                findNavController().popBackStack()
+               todolistViewModel.addItem(title,des, false ,date)
 
             }
 
@@ -53,4 +49,3 @@ class AddFragment : Fragment() {
         }
 
     }
-}
