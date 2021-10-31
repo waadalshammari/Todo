@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFAFA"
+    tools:context="com.example.todolistapp.view.AddFragment">
+
+    <EditText
+        android:id="@+id/title_add"
+        android:layout_width="322dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/title_input"
+        android:ems="0"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/des_add"
+        android:layout_width="367dp"
+
+        android:layout_height="397dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/title_input"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_add" />
+
+    <EditText
+        android:id="@+id/date_add"
+        android:layout_width="242dp"
+
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/title_input"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="date"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/des_add" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="423dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#FF7B79"
+        android:text="ADD TODO"
+        android:textColor="#F8F5F5"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_add" />
+
+    <ImageView
+        android:id="@+id/date_button_add"
+        android:layout_width="22dp"
+        android:layout_height="23dp"
+        android:background="#F1ECEC"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintBottom_toBottomOf="@+id/date_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/des_add"
+        app:layout_constraintVertical_bias="0.847" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
