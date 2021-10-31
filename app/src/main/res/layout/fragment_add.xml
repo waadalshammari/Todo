@@ -44,7 +44,7 @@
         android:id="@+id/date_add"
         android:layout_width="242dp"
 
-        android:layout_height="37dp"
+        android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/title_input"
         android:ems="10"
@@ -58,10 +58,10 @@
 
     <Button
         android:id="@+id/add_button"
-        android:layout_width="423dp"
-        android:layout_height="51dp"
+        android:layout_width="345dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="78dp"
         android:backgroundTint="#FF7B79"
         android:text="ADD TODO"
         android:textColor="#F8F5F5"
