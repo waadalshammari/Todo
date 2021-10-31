@@ -8,7 +8,7 @@
     <com.google.android.material.card.MaterialCardView
 
         android:layout_width="match_parent"
-        android:layout_height="173dp"
+        android:layout_height="180dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
@@ -29,11 +29,12 @@
 
             <TextView
                 android:id="@+id/des_textview_applayout"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-black"
-                android:text="TextView"  android:layout_width="0dp"/>
+                android:text="TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -73,12 +74,13 @@
                 android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="Date"
-                android:inputType="date" />
+                android:inputType="date"
+                android:minHeight="48dp" />
 
             <CheckBox
                 android:id="@+id/checkBox_app_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="85dp"
                 android:layout_marginTop="1dp" />
 
