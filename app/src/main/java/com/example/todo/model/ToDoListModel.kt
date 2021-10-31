@@ -9,7 +9,7 @@ data class ToDoListModel(
  val title : String,
  val description : String,
  val check : Boolean,
- val date : Int,
+ val date : String,
 
  @PrimaryKey(autoGenerate = true)
  val id: Int = 0

@@ -34,7 +34,7 @@ class EditFragment : Fragment() {
     editButton.setOnClickListener {
         val title = titleEditText.text.toString()
         val des = desEditText.text.toString()
-        val date = dateEditText.text.toString().toInt()
+        val date = dateEditText.text.toString()
 
         todolistViewModel.addItem(title,des, false ,date)
 

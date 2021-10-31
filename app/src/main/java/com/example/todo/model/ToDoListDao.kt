@@ -10,7 +10,7 @@ interface ToDoListDao {
     @Insert
     suspend fun addItem (toDoListModel: ToDoListModel)
 
-    @Query ("SELECT * FROM ToDoListModel")
+    @Query ("SELECT * FROM todolistmodel")
     fun getItem () : LiveData<List<ToDoListModel>>
 
     @Update

@@ -3,10 +3,7 @@ package com.example.todolistapp.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +16,8 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
 
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoListViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
+            ToDoListAdapter.ToDoListViewHolder {
         return ToDoListViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.app_layout,
@@ -51,8 +49,8 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         val titleTextView : TextView = view.findViewById(R.id.title_textview_applayout)
         val desTextView : TextView = view.findViewById(R.id.des_textview_applayout)
         val check : CheckBox = view.findViewById(R.id.checkBox_app_layout)
-        val deletebutton : Button = view.findViewById(R.id.delete_button_app_layout)
-        val editbutton : Button= view.findViewById(R.id.edit_button_app_layout)
+        val deletebutton : ImageView = view.findViewById(R.id.delete_button_app_layout)
+        val editbutton : ImageView= view.findViewById(R.id.edit_button_app_layout)
         val date : EditText = view.findViewById(R.id.Date)
 
     }
