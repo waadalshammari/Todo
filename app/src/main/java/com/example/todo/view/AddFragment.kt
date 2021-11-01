@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.DatePicker
 import android.widget.EditText
+import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.example.todo.R
 import java.text.SimpleDateFormat
@@ -28,7 +31,7 @@ class AddFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+         val formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
         val titleEditText: EditText = view.findViewById(R.id.title_add)
         val desEditText: EditText = view.findViewById(R.id.des_add)
         val dateEditText: EditText = view.findViewById(R.id.date_add)
@@ -40,40 +43,26 @@ class AddFragment : Fragment() {
             val des = desEditText.text.toString()
             val date = dateEditText.text.toString()
 
-               todolistViewModel.addItem(title,des, false ,date)
-            }
-
-
-       fun EditText.transformIntoDatePicker(context: Context, format: String, maxDate: Date? = null) {
-           isFocusableInTouchMode = false
-            isClickable = true
-            isFocusable = false
-
-            val myCalendar = Calendar.getInstance()
-            val datePickerOnDataSetListener =
-                DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-                    myCalendar.set(Calendar.YEAR, year)
-                    myCalendar.set(Calendar.MONTH, monthOfYear)
-                    myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-                    val time = SimpleDateFormat (format, Locale.UK) // ??????
-                    setText(time.format(myCalendar.time))
-                }
-            dateEditText.setOnClickListener {
+            todolistViewModel.addItem(title, des, false, date)
+        }
+        dateEditText.setOnClickListener {
+           // var fragment: DialogFragment = DatePickerDialog()
+            val getdate = Calendar.getInstance()
+            val datepicker = activity?.let { it1 ->
                 DatePickerDialog(
-                    context, datePickerOnDataSetListener, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                    myCalendar.get(Calendar.DAY_OF_MONTH)
-                ).run {
-                    maxDate?.time?.also { datePicker.maxDate = it }
-                    show()
-                }
+                    it1,android.R.style.Theme_Holo_Dialog_NoActionBar_MinWidth,
+                    DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
+                        val selectdate : Calendar = Calendar.getInstance()
+                        selectdate.set(Calendar.YEAR,i)
+                        selectdate.set(Calendar.MONTH,i2)
+                        selectdate.set(Calendar.DAY_OF_MONTH,i3)
+                        val date : String = formatDate.format(selectdate.time)
+
+                    }, getdate.get(Calendar.YEAR) , getdate.get(Calendar.MONTH) , getdate.get(Calendar.DAY_OF_MONTH))
             }
+            datepicker!!.show()
         }
-    }
-
-        // كيف لما يضغط على الايقون حقت التاريخ يطلع له التقويم ويختار منها وتطلع في التكست
-        // كيف اسوي الدوو ديت ولما يسوي شيك انها تمت يتغير لون التكست
-
         }
+}
 
 
