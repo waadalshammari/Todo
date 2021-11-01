@@ -11,6 +11,7 @@ import android.widget.EditText
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todo.R
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -26,6 +27,9 @@ class EditFragment : Fragment() {
 }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
+
 
         val titleEditText: EditText = view.findViewById(R.id.title_edit)
         val desEditText: EditText = view.findViewById(R.id.des_edit)
@@ -52,7 +56,7 @@ class EditFragment : Fragment() {
                         selectdate.set(Calendar.YEAR,i)
                         selectdate.set(Calendar.MONTH,i2)
                         selectdate.set(Calendar.DAY_OF_MONTH,i3)
-                        val dateEdit : String =
+                        val date : String = formatDate.format(selectdate.time)
 
                     }, getdate.get(Calendar.YEAR) , getdate.get(Calendar.MONTH) , getdate.get(
                         Calendar.DAY_OF_MONTH))

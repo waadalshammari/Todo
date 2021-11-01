@@ -11,7 +11,7 @@ class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
+        supportActionBar?.hide()
         val intent= Intent(this,MainActivity::class.java)// why we put this??
         object : CountDownTimer(2000,1000){
             override fun onTick(p0: Long) {

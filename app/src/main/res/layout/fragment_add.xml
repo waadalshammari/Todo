@@ -8,68 +8,70 @@
     android:background="#FBFAFA"
     tools:context="com.example.todolistapp.view.AddFragment">
 
-    <EditText
-        android:id="@+id/title_add"
-        android:layout_width="322dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/title_input"
-        android:ems="0"
-        android:hint="Title"
-        android:inputType="textPersonName"
-        android:padding="20dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/des_add"
-        android:layout_width="367dp"
-
-        android:layout_height="397dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/title_input"
-        android:ems="10"
-        android:hint="Description"
-        android:inputType="textPersonName"
-        android:padding="20dp"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_add" />
-
-    <EditText
-        android:id="@+id/date_add"
-        android:layout_width="242dp"
-
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/title_input"
-        android:ems="10"
-        android:inputType="date"
-        android:padding="10dp"
-        android:focusableInTouchMode="false"
-        android:hint="dd/mm/yyyy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/des_add" />
-
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="345dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#FF7B79"
-        android:text="ADD TODO"
-        android:textColor="#F8F5F5"
-        app:cornerRadius="20dp"
+    <ScrollView
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_add"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintTop_toTopOf="parent"  android:layout_width="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/title_add"
+                android:layout_width="322dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/title_input"
+                android:ems="0"
+                android:hint="Title"
+                android:inputType="textPersonName"
+                android:padding="20dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/des_add"
+                android:layout_width="367dp"
+
+                android:layout_height="397dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/title_input"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textPersonName"
+                android:padding="20dp"
+                android:textSize="34sp" />
+
+            <EditText
+                android:id="@+id/date_add"
+                android:layout_width="242dp"
+
+                android:layout_height="48dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/title_input"
+                android:ems="10"
+                android:focusableInTouchMode="false"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="345dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#FF7B79"
+                android:text="ADD TODO"
+                android:textColor="#F8F5F5"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

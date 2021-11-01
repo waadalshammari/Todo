@@ -32,6 +32,8 @@ class AddFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
          val formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
+
+
         val titleEditText: EditText = view.findViewById(R.id.title_add)
         val desEditText: EditText = view.findViewById(R.id.des_add)
         val dateEditText: EditText = view.findViewById(R.id.date_add)
