@@ -28,7 +28,7 @@ class EditFragment : Fragment() {
         val titleEditText: EditText = view.findViewById(R.id.title_edit)
         val desEditText: EditText = view.findViewById(R.id.des_edit)
         val dateEditText: EditText = view.findViewById(R.id.date_edit)
-        val dateButton: Button = view.findViewById(R.id.date_button_edit)
+       // val dateButton: Button = view.findViewById(R.id.date_button_edit)
         val editButton: Button = view.findViewById(R.id.edite_button)
 
     editButton.setOnClickListener {

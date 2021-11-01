@@ -11,8 +11,8 @@ data class ToDoListModel(
  val description : String,
  val check : Boolean,
  val date : String,
- val editbutton : ImageView,
- val deletebutton : ImageView,
+ //val editbutton : ImageView,
+ //val deletebutton : ImageView,
 
 
  @PrimaryKey(autoGenerate = true)
