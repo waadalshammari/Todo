@@ -9,8 +9,8 @@ import androidx.room.PrimaryKey
 data class ToDoListModel(
  val title : String,
  val description : String,
- val check : Boolean,
  val date : String,
+ val check : Boolean = false,
  //val editbutton : ImageView,
  //val deletebutton : ImageView,
 

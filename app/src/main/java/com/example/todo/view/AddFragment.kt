@@ -45,7 +45,7 @@ class AddFragment : Fragment() {
             val des = desEditText.text.toString()
             val date = dateEditText.text.toString()
 
-            todolistViewModel.addItem(title, des, false, date)
+            todolistViewModel.addItem(title, des, date)
         }
         // for date Picker to show by click on the Text.
         dateEditText.setOnClickListener {

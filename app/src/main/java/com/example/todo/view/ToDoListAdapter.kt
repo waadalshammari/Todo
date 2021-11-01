@@ -33,6 +33,8 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         holder.titleTextView.text = task.title
         holder.desTextView.text = task.description
         holder.check.text = task.check.toString()
+
+
         holder.titleTextView.setOnClickListener {
             viewModel.selectedItemMutableLiveDate.postValue(task)
             it.findNavController().navigate(R.id.action_onboarding_listFragment_to_editFragment)

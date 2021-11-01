@@ -42,7 +42,7 @@ class EditFragment : Fragment() {
         val des = desEditText.text.toString()
         val date = dateEditText.text.toString()
 
-        todolistViewModel.addItem(title,des, false ,date)
+        todolistViewModel.addItem(title,des, date)
 
     }
         dateEditText.setOnClickListener {
