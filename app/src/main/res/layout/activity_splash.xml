@@ -7,8 +7,8 @@
     tools:context="com.example.todolistapp.Splash">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#FFE4E4"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,5 +26,18 @@
             android:textColor="#FF7B79"
             android:textSize="96sp"
             android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="91dp"
+            android:layout_height="121dp"
+            app:srcCompat="@drawable/pic" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="76dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/image" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

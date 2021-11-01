@@ -47,6 +47,7 @@ class AddFragment : Fragment() {
 
             todolistViewModel.addItem(title, des, false, date)
         }
+        // for date Picker to show by click on the Text.
         dateEditText.setOnClickListener {
            // var fragment: DialogFragment = DatePickerDialog()
             val getdate = Calendar.getInstance()
