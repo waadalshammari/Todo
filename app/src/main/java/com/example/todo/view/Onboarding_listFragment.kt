@@ -42,9 +42,9 @@ class Onboarding_listFragment : Fragment() {
 
 
         todolistViewModel.todolisttask.observe(viewLifecycleOwner, Observer {
-            it?.let { items ->
+            it?.let { task ->
                 todolistTask.clear()
-                todolistTask.addAll(items)
+                todolistTask.addAll(task)
                 todolistAdapter.notifyDataSetChanged()
             }
         })

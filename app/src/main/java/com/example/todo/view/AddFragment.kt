@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -40,6 +37,7 @@ class AddFragment : Fragment() {
         val dateEditText: EditText = view.findViewById(R.id.date_add)
        // val dateButton: ImageView = view.findViewById(R.id.date_button_add)
         val addButton: Button = view.findViewById(R.id.add_button)
+        val dateAdd: TextView = view.findViewById(R.id.date_add)
 
         addButton.setOnClickListener {
             val title = titleEditText.text.toString()
@@ -50,24 +48,23 @@ class AddFragment : Fragment() {
             findNavController().popBackStack()
         }
         // for date Picker to show by click on the Text.
-        dateEditText.setOnClickListener {
-           // var fragment: DialogFragment = DatePickerDialog()
-            val getdate = Calendar.getInstance()
-            val datepicker = activity?.let { it1 ->
-                DatePickerDialog(
-                    it1,android.R.style.Theme_Holo_Dialog_NoActionBar_MinWidth,
-                    DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
-                        val selectdate : Calendar = Calendar.getInstance()
-                        selectdate.set(Calendar.YEAR,i)
-                        selectdate.set(Calendar.MONTH,i2)
-                        selectdate.set(Calendar.DAY_OF_MONTH,i3)
-                        val date : String = formatDate.format(selectdate.time)
+        dateAdd.setOnClickListener {
 
-                    }, getdate.get(Calendar.YEAR) , getdate.get(Calendar.MONTH) , getdate.get(Calendar.DAY_OF_MONTH))
-            }
-            datepicker!!.show()
+            //getting current day,month and year.
+
+            val calendar: Calendar = Calendar.getInstance()
+            val year: Int = calendar.get(Calendar.YEAR)
+            val month: Int = calendar.get(Calendar.MONTH)
+            val day: Int = calendar.get(Calendar.DAY_OF_MONTH)
+
+
+            val dpd = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener { view, year, month, day ->
+                dateEditText.setText("" + day + "/" + month + "/" + year)
+            }, year, month, day)
+            dpd.show()
         }
-        }
+
+    }
 }
 
 
