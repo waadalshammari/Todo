@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.todo.R
 import java.text.SimpleDateFormat
 import java.util.*
@@ -46,6 +47,7 @@ class AddFragment : Fragment() {
             val date = dateEditText.text.toString()
 
             todolistViewModel.addItem(title, des, date)
+            findNavController().popBackStack()
         }
         // for date Picker to show by click on the Text.
         dateEditText.setOnClickListener {

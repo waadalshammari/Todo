@@ -40,7 +40,7 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
             it.findNavController().navigate(R.id.action_onboarding_listFragment_to_editFragment)
         }
        holder.deletebutton.setOnClickListener {
-
+         viewModel.deleteItem(task)
        }
        holder.editbutton.setOnClickListener {
            viewModel.selectedItemMutableLiveDate.postValue(task)
