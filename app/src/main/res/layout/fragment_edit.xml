@@ -57,7 +57,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/title_input"
                 android:ems="10"
-                android:hint="      /          /      "
+                android:hint="dd/mm/yyyy"
                 android:inputType="date"
                 android:padding="10dp" />
 

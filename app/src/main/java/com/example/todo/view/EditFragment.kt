@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todo.R
@@ -34,7 +35,7 @@ class EditFragment : Fragment() {
         val titleEditText: EditText = view.findViewById(R.id.title_edit)
         val desEditText: EditText = view.findViewById(R.id.des_edit)
         val dateEditText: EditText = view.findViewById(R.id.date_edit)
-       // val dateButton: Button = view.findViewById(R.id.date_button_edit)
+        val dateedit: TextView = view.findViewById(R.id.date_edit)
         val editButton: Button = view.findViewById(R.id.edite_button)
 
     editButton.setOnClickListener {
@@ -42,26 +43,29 @@ class EditFragment : Fragment() {
         val des = desEditText.text.toString()
         val date = dateEditText.text.toString()
 
-        todolistViewModel.addItem(title,des, date)
+        if (title.isNotEmpty() && date.isNotEmpty()){
 
-    }
-        dateEditText.setOnClickListener {
-            // var fragment: DialogFragment = DatePickerDialog()
-            val getdate = Calendar.getInstance()
-            val datepicker = activity?.let { it1 ->
-                DatePickerDialog(
-                    it1,android.R.style.Theme_Holo_Dialog_NoActionBar_MinWidth,
-                    DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
-                        val selectdate : Calendar = Calendar.getInstance()
-                        selectdate.set(Calendar.YEAR,i)
-                        selectdate.set(Calendar.MONTH,i2)
-                        selectdate.set(Calendar.DAY_OF_MONTH,i3)
-                        val date : String = formatDate.format(selectdate.time)
-
-                    }, getdate.get(Calendar.YEAR) , getdate.get(Calendar.MONTH) , getdate.get(
-                        Calendar.DAY_OF_MONTH))
-            }
-            datepicker!!.show()
         }
+            todolistViewModel.addItem(title,des, date)
+        findNavController().popBackStack()
+
     }
-}
+
+        dateedit.setOnClickListener {
+
+            //getting current day,month and year.
+
+            val calendar: Calendar = Calendar.getInstance()
+            val year: Int = calendar.get(Calendar.YEAR)
+            val month: Int = calendar.get(Calendar.MONTH)
+            val day: Int = calendar.get(Calendar.DAY_OF_MONTH)
+
+
+            val dpd = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener
+            { view, year, month, day ->
+                dateEditText.setText("" + day + "/" + month + "/" + year)
+            }, year, month, day)
+            dpd.show()
+        }
+        }
+        }

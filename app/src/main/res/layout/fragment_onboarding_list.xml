@@ -7,20 +7,27 @@
     android:layout_height="match_parent"
     tools:context="com.example.todolistapp.view.Onboarding_listFragment" >
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginTop="40dp"
-        android:text="LIST OF TODO"
-        android:textColor="#F88E8C"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_app"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+            android:text="LIST OF TODO"
+            android:textColor="#F88E8C"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
 
     <View
         android:id="@+id/divider"
@@ -37,22 +44,19 @@
         android:id="@+id/recyclerview_app"
         android:layout_width="409dp"
         android:layout_height="650dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="1dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/divider" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="#F76C6A"

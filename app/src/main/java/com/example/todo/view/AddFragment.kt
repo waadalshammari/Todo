@@ -35,7 +35,6 @@ class AddFragment : Fragment() {
         val titleEditText: EditText = view.findViewById(R.id.title_add)
         val desEditText: EditText = view.findViewById(R.id.des_add)
         val dateEditText: EditText = view.findViewById(R.id.date_add)
-       // val dateButton: ImageView = view.findViewById(R.id.date_button_add)
         val addButton: Button = view.findViewById(R.id.add_button)
         val dateAdd: TextView = view.findViewById(R.id.date_add)
 
@@ -44,7 +43,9 @@ class AddFragment : Fragment() {
             val des = desEditText.text.toString()
             val date = dateEditText.text.toString()
 
-            todolistViewModel.addItem(title, des, date)
+            if (title.isNotEmpty() && date.isNotEmpty()){
+
+                todolistViewModel.addItem(title, des, date)
             findNavController().popBackStack()
         }
         // for date Picker to show by click on the Text.
@@ -65,6 +66,6 @@ class AddFragment : Fragment() {
         }
 
     }
-}
+}}
 
 
