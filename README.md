@@ -3,8 +3,22 @@
 
 
 *used Kotlin for my Android app.
+
+
+
+
 *used Android Studio to creat the app.
+
+
+
+
+
 *used Figma to design
+
+
+
+
+
 *different websites for searshing 
 _______________________________________________________________________________________________________________________________________________
 
