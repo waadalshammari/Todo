@@ -36,13 +36,40 @@ user stories:
 
 
 *As a user I want to add task in organized way
+
+
+
 *As a user I want to be able to  do check my task if it is done
+
+
+
 *As a user I want to add "taskTitle,date and task description" 
+
+
 * As a user I want to see all the my task  i add on the main screen. 
+
+
+
 *As a user I want to edit my task "title,description,date" and save the changes. 
+
+
+
+
 *As a user I want see my details of the task.
+
+
+
+
 *As a user I want to delete my task if decide it's not necessary or or if i did it.
+
+
+
+
 * As a user I want when the date of my task pass with out doing it I will be able to know that. 
+
+
+
+
 * *As a user I want when I click on the task title the details appear.
 
 
