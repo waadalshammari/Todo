@@ -1,5 +1,6 @@
 package com.example.todolistapp.view
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.todo.R
 
 import com.example.todolistapp.model.ToDoListModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListViewModel):
     RecyclerView.Adapter<ToDoListAdapter.ToDoListViewHolder>() {
@@ -33,10 +36,26 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         holder.titleTextView.text = task.title
         holder.desTextView.text = task.description
         holder.date.text = task.date
-        holder.check.text = task.check.toString()
 
 
+        var currentDate = Date()
+        val format = SimpleDateFormat("yyyy/MM/dd")
+        val deadline = format.parse(task.date)
 
+        if (currentDate < deadline) {
+            holder.titleTextView.setPaintFlags(0)
+        } else {
+            holder.titleTextView.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+        }
+        holder.check.setOnClickListener {
+            task.check = holder.check.isChecked
+            viewModel.updateItem(task)
+            if (holder.check.isChecked) {
+                holder.titleTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG)
+            } else {
+                holder.titleTextView.setPaintFlags(0)
+            }
+        }
 
         holder.titleTextView.setOnClickListener {
             viewModel.selectedItemMutableLiveDate.postValue(task)
