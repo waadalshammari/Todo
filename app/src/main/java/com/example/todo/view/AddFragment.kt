@@ -29,23 +29,25 @@ class AddFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-         val formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
+
 
 
         val titleEditText: EditText = view.findViewById(R.id.title_add)
         val desEditText: EditText = view.findViewById(R.id.des_add)
-        val dateEditText: EditText = view.findViewById(R.id.date_add)
         val addButton: Button = view.findViewById(R.id.add_button)
         val dateAdd: TextView = view.findViewById(R.id.date_add)
+
+
 
         addButton.setOnClickListener {
             val title = titleEditText.text.toString()
             val des = desEditText.text.toString()
-            val date = dateEditText.text.toString()
+            val date = dateAdd.text.toString()
 
-            if (title.isNotEmpty() && date.isNotEmpty()){
+            if (title.isNotEmpty() && date.isNotEmpty()) {
 
-                todolistViewModel.addItem(title, des, date)
+            }
+            todolistViewModel.addItem(title, des, date)
             findNavController().popBackStack()
         }
         // for date Picker to show by click on the Text.
@@ -60,12 +62,12 @@ class AddFragment : Fragment() {
 
 
             val dpd = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener { view, year, month, day ->
-                dateEditText.setText("" + day + "/" + month + "/" + year)
+                dateAdd.text = ("" + day + "/" + month + "/" + year)
             }, year, month, day)
             dpd.show()
         }
 
-    }
+
 }}
 
 

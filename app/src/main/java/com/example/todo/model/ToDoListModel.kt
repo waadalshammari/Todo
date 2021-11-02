@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class ToDoListModel(
- val title : String,
- val description : String,
- val date : String,
- val check : Boolean = false,
+ var title : String,
+ var description : String,
+ var date : String,
+ var check : Boolean = false,
  //val editbutton : ImageView,
  //val deletebutton : ImageView,
 

@@ -32,7 +32,10 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
 
         holder.titleTextView.text = task.title
         holder.desTextView.text = task.description
+        holder.date.text = task.date
         holder.check.text = task.check.toString()
+
+
 
 
         holder.titleTextView.setOnClickListener {
@@ -60,7 +63,7 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         val check : CheckBox = view.findViewById(R.id.checkBox_app_layout)
         val deletebutton : ImageView = view.findViewById(R.id.delete_button_app_layout)
         val editbutton : ImageView= view.findViewById(R.id.edit_button_app_layout)
-        val date : EditText = view.findViewById(R.id.Date)
+        val date : TextView = view.findViewById(R.id.Date)
 
     }
 }

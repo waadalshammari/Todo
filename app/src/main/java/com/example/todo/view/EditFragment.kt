@@ -12,12 +12,16 @@ import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todo.R
+import com.example.todolistapp.model.ToDoListModel
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class EditFragment : Fragment() {
     private val todolistViewModel: ToDoListViewModel by activityViewModels()
+
+    // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
+    private lateinit var selectedTask: ToDoListModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,24 +33,39 @@ class EditFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
-
 
         val titleEditText: EditText = view.findViewById(R.id.title_edit)
         val desEditText: EditText = view.findViewById(R.id.des_edit)
-        val dateEditText: EditText = view.findViewById(R.id.date_edit)
         val dateedit: TextView = view.findViewById(R.id.date_edit)
         val editButton: Button = view.findViewById(R.id.edite_button)
+
+        // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
+        todolistViewModel.selectedItemMutableLiveDate.observe(viewLifecycleOwner, {
+            it?.let { task ->
+
+                titleEditText.setText(task.title)
+                desEditText.setText(task.description)
+                dateedit.setText(task.date)
+
+             selectedTask = task
+            }
+        })
 
     editButton.setOnClickListener {
         val title = titleEditText.text.toString()
         val des = desEditText.text.toString()
-        val date = dateEditText.text.toString()
+        val date = dateedit.text.toString()
 
         if (title.isNotEmpty() && date.isNotEmpty()){
 
         }
-            todolistViewModel.addItem(title,des, date)
+            //todolistViewModel.addItem(title,des, date)
+        // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
+        selectedTask.title = title
+        selectedTask.description = des
+        selectedTask.date= date
+        todolistViewModel.updateItem(selectedTask)
+
         findNavController().popBackStack()
 
     }
@@ -61,11 +80,11 @@ class EditFragment : Fragment() {
             val day: Int = calendar.get(Calendar.DAY_OF_MONTH)
 
 
-            val dpd = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener
+            val Date = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener
             { view, year, month, day ->
-                dateEditText.setText("" + day + "/" + month + "/" + year)
+                dateedit.setText("" + day + "/" + month + "/" + year)
             }, year, month, day)
-            dpd.show()
+            Date.show()
         }
         }
         }
