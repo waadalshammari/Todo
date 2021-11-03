@@ -111,6 +111,7 @@ ________________________________________________________________________________
 
 planning : 
 
+
 On the beginning  searched for different To do list apps to have full understanding about what I will work on and to have an idea about the desing after that 
 I designed my app using Figma then tranformed the design on Android Studio.
 wrote downe what my app need and what features I want to put on it, eventually start coding and working on my app.
@@ -121,7 +122,7 @@ wrote downe what my app need and what features I want to put on it, eventually s
 
 development process :
 
- development process were : 
+  
 * Searched: for different apps and what is the basic features in every app 
 * wrote : wrote dawon the features I wont for my apps and saerched in different website for the code to understand what I will do when I start my coding.
 * designed : designed my app  in Figma then In Android Studio.
