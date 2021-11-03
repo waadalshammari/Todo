@@ -57,18 +57,16 @@ class AddFragment : Fragment() {
 
             val calendar: Calendar = Calendar.getInstance()
             val year: Int = calendar.get(Calendar.YEAR)
-            val month: Int = calendar.get(Calendar.MONTH)
+            var month: Int = calendar.get(Calendar.MONTH)
             val day: Int = calendar.get(Calendar.DAY_OF_MONTH)
 
 
             val date = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener { view, year, month, day ->
-                if (month >= 0){
-                    month+1
-                dateAdd.text = ("" + day + "/" + month + "/" + year)}
+
+                dateAdd.text = ("" + day + "/" + (month.toInt() + 1 ).toString() + "/" + year)
             }, year, month, day)
             date.show()
         }
-
 
 }}
 

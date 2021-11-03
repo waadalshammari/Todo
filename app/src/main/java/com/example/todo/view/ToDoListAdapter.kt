@@ -1,10 +1,14 @@
 package com.example.todolistapp.view
 
+import android.graphics.Color
 import android.graphics.Paint
+import android.os.Build
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +16,9 @@ import com.example.todo.R
 
 import com.example.todolistapp.model.ToDoListModel
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListViewModel):
@@ -30,6 +37,7 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         )
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ToDoListViewHolder, position: Int) {
         val task = task [position]
 
@@ -38,20 +46,25 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         holder.date.text = task.date
 
 
-        var currentDate = Date()
-        val format = SimpleDateFormat("yyyy/MM/dd")
-        val deadline = format.parse(task.date)
 
-        if (currentDate < deadline) {
-            holder.titleTextView.setPaintFlags(0)
+        val format = SimpleDateFormat("dd/MM/yyyy")
+        var currentDate = Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+        val deadline = format.parse(task.date).toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+
+        if (deadline.isBefore(currentDate)) {
+            holder.titleTextView.setTextColor(Color.BLUE)
         } else {
-            holder.titleTextView.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            holder.titleTextView.setPaintFlags(0)
+            holder.titleTextView.setTextColor(Color.BLACK)
         }
+
+
         holder.check.setOnClickListener {
             task.check = holder.check.isChecked
-            viewModel.updateItem(task)
             if (holder.check.isChecked) {
                 holder.titleTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG)
+                viewModel.updateItem(task)
+
             } else {
                 holder.titleTextView.setPaintFlags(0)
             }

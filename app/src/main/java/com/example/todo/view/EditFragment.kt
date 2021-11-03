@@ -82,8 +82,8 @@ class EditFragment : Fragment() {
 
             val Date = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener
             { view, year, month, day ->
-                dateedit.setText("" + day + "/" + month + "/" + year)
-            }, year, month, day)
+                //TODO year /month /day
+                dateedit.text = ("" + day + "/" + (month.toInt() + 1 ).toString() + "/" + year)            }, year, month, day)
             Date.show()
         }
         }
