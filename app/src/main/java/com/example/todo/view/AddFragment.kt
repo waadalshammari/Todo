@@ -43,14 +43,14 @@ class AddFragment : Fragment() {
             val title = titleEditText.text.toString()
             val des = desEditText.text.toString()
             val date = dateAdd.text.toString()
-
+             // to make sure if empty will not crash
             if (title.isNotEmpty() && date.isNotEmpty()) {
 
             }
             todolistViewModel.addItem(title, des, date)
             findNavController().popBackStack()
         }
-        // for date Picker to show by click on the Text.
+        // for date Picker to show by click on the date .
         dateAdd.setOnClickListener {
 
             //getting current day,month and year.
@@ -61,10 +61,12 @@ class AddFragment : Fragment() {
             val day: Int = calendar.get(Calendar.DAY_OF_MONTH)
 
 
-            val dpd = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener { view, year, month, day ->
-                dateAdd.text = ("" + day + "/" + month + "/" + year)
+            val date = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener { view, year, month, day ->
+                if (month >= 0){
+                    month+1
+                dateAdd.text = ("" + day + "/" + month + "/" + year)}
             }, year, month, day)
-            dpd.show()
+            date.show()
         }
 
 

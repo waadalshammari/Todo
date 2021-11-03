@@ -11,8 +11,7 @@ data class ToDoListModel(
  var description : String,
  var date : String,
  var check : Boolean = false,
- //val editbutton : ImageView,
- //val deletebutton : ImageView,
+
 
 
  @PrimaryKey(autoGenerate = true)

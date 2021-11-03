@@ -12,7 +12,7 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // hide the actionbar
+        // hide the actionbar for all fragments
         supportActionBar?.hide()
 
         // set time for splash
