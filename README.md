@@ -4,7 +4,7 @@
 
 
 
-1)list of technologies:
+             list of technologies:
 
 
 
@@ -30,7 +30,7 @@
 _______________________________________________________________________________________________________________________________________________
 
 
-Link to wireframes :
+                 Link to wireframes :
 
 https://www.figma.com/proto/fvkg6zhfgL5ADDY2Xxw8Hz/to-do-list?page-id=0%3A1&node-id=3%3A2&viewport=241%2C48%2C0.87&scaling=min-zoom
 ________________________________________________________________________________________________________
@@ -51,7 +51,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________________________________
 
-user stories:
+           user stories:
 
 
 
@@ -103,7 +103,7 @@ ________________________________________________________________________________
 
 
 
-3)Document your planning and tell a story about your development process and problem-solving strategy.
+    Document your planning and tell a story about your development process and problem-solving strategy.
 
 
 
@@ -121,7 +121,7 @@ wrote downe what my app need and what features I want to put on it, eventually s
 
 development process :
 
-for my development process I
+ development process were : 
 * Searched: for different apps and what is the basic features in every app 
 * wrote : wrote dawon the features I wont for my apps and saerched in different website for the code to understand what I will do when I start my coding.
 * designed : designed my app  in Figma then In Android Studio.
@@ -143,7 +143,7 @@ asked programmers who have knowledge or Mr. Mohamed and
  
  
  
- 4)List unsolved problems which would be fixed in future iterations:
+       List unsolved problems which would be fixed in future iterations:
  
  
  
@@ -158,7 +158,7 @@ ________________________________________________________________________________
 
 
 
-5)Describe how some of your favorite functions work
+       Describe how some of your favorite functions work
 
 
 DatePickerDialog the one which I like the most cuase it can be used in different way as a calender on the design or by click on icone , button or text.
