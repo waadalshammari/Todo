@@ -37,11 +37,9 @@ ________________________________________________________________________________
 
 
 
-https://www.figma.com/file/fvkg6zhfgL5ADDY2Xxw8Hz/to-do-list?node-id=3%3A2
 
 
-![image](https://user-images.githubusercontent.com/91456619/140024382-8d8c595a-49c2-431e-9b47-91c7d0dc7870.png)
-
+![image](https://user-images.githubusercontent.com/91456619/140027255-a21299ec-d950-47ca-bbca-976edf988dba.png)
 
 ![image](https://user-images.githubusercontent.com/91456619/140024399-c6b2e083-903e-4389-8af2-4b7b63ce5395.png)
 
