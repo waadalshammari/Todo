@@ -113,7 +113,6 @@ planning :
 
 
 On the beginning searched for different To do list apps to have full understanding about what I will work on and to have an idea about the design after that I designed my app using Figma then transformed the design on Android Studio. wrote down what my app need and what features I want to put on it, eventually start coding and working on my app.
-![image](https://user-images.githubusercontent.com/91456619/140165000-772d0527-e04b-4868-a588-5ddcd88315db.png)
 
 
 
@@ -126,9 +125,9 @@ development process :
 *Searched: for different apps and what is the basic features in every app
 *wrote : wrote down the features I wont for my apps and searched in different website for the code to understand what I will do when I start my coding.
 *designed : designed my app in Figma then In Android Studio.
-*wrote the code : created packages work on database,adapter,viewmodel,fragments and splash .
+*wrote the code : created packages for database,adapter,viewmodel,fragments and splash .
 *run the app : tried to run the app and solved the errors.
-![image](https://user-images.githubusercontent.com/91456619/140165094-fe5bbcc5-41a1-4551-a4ca-f4bd7482b365.png)
+
 
 
 
@@ -138,7 +137,7 @@ development process :
  Problem solving  strategy:
 
 Searched in different website like developer android,youtube,stackoverflow and medium asked programmers who have knowledge or Mr. Mohamed and Mr.Saad
-![image](https://user-images.githubusercontent.com/91456619/140165186-846ab1ff-4315-4fe2-b7df-b7e861f3ba1e.png)
+
 
  ____________________________________________________________________________________________________________________________________________________________
  
@@ -160,10 +159,13 @@ ________________________________________________________________________________
 
 
 
-# Describe how some of your favorite functions work
+# Describe how some of your favourite functions work :
 
 
-DatePickerDialog the one which I like the most cuase it can be used in different way as a calender on the design or by click on icone , button or text.
+DatePickerDialog the one which I like the most cause it can be used in different way as a calendar on the design or by click on icon , button or text
+and make the user choose the date 
+
+
 
 
 
