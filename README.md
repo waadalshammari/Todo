@@ -4,7 +4,7 @@
 
 
 
-1)list of technologies:
+  # list of technologies:
 
 
 
@@ -30,7 +30,7 @@
 _______________________________________________________________________________________________________________________________________________
 
 
-Link to wireframes :
+# Link to wireframes :
 
 https://www.figma.com/proto/fvkg6zhfgL5ADDY2Xxw8Hz/to-do-list?page-id=0%3A1&node-id=3%3A2&viewport=241%2C48%2C0.87&scaling=min-zoom
 ________________________________________________________________________________________________________
@@ -51,7 +51,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________________________________
 
-user stories:
+# user stories:
 
 
 
@@ -103,7 +103,7 @@ ________________________________________________________________________________
 
 
 
-3)Document your planning and tell a story about your development process and problem-solving strategy.
+# Document your planning and tell a story about your development process and problem-solving strategy.
 
 
 
@@ -111,9 +111,9 @@ ________________________________________________________________________________
 
 planning : 
 
-On the beginning  searched for different To do list apps to have full understanding about what I will work on and to have an idea about the desing after that 
-I designed my app using Figma then tranformed the design on Android Studio.
-wrote downe what my app need and what features I want to put on it, eventually start coding and working on my app.
+
+On the beginning searched for different To do list apps to have full understanding about what I will work on and to have an idea about the design after that I designed my app using Figma then transformed the design on Android Studio. wrote down what my app need and what features I want to put on it, eventually start coding and working on my app.
+
 
 
 
@@ -121,12 +121,14 @@ wrote downe what my app need and what features I want to put on it, eventually s
 
 development process :
 
-for my development process I
-Searched: for different apps and what is the basic features in every app 
-wrote : wrote dawon the features I wont for my apps and saerched in different website for the code to understand what I will do when I start my coding.
-designed : designed my app  in Figma then In Android Studio.
-wrote the code : created packges work on database,adapter,viewmodel,fragments and splash .
-run the app : tried to run the app and solved the errors.
+  
+*Searched: for different apps and what is the basic features in every app
+*wrote : wrote down the features I wont for my apps and searched in different website for the code to understand what I will do when I start my coding.
+*designed : designed my app in Figma then In Android Studio.
+*wrote the code : created packages for database,adapter,viewmodel,fragments and splash .
+*run the app : tried to run the app and solved the errors.
+
+
 
 
 
@@ -134,16 +136,15 @@ run the app : tried to run the app and solved the errors.
 
  Problem solving  strategy:
 
-Searched in different  website like developer android,youtube,stackoverflow and medium
-asked programmers who have knowledge or Mr. Mohamed and
- Mr.Saad
- 
+Searched in different website like developer android,youtube,stackoverflow and medium asked programmers who have knowledge or Mr. Mohamed and Mr.Saad
+
+
  ____________________________________________________________________________________________________________________________________________________________
  
  
  
  
- 4)List unsolved problems which would be fixed in future iterations:
+# List unsolved problems which would be fixed in future iterations:
  
  
  
@@ -158,9 +159,11 @@ ________________________________________________________________________________
 
 
 
-5)Describe how some of your favorite functions work
+# Describe how some of your favourite functions work :
 
 
+DatePickerDialog the one which I like the most cause it can be used in different way as a calendar on the design or by click on icon , button or text
+and make the user choose the date 
 
 
 
