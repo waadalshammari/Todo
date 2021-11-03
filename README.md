@@ -122,11 +122,11 @@ wrote downe what my app need and what features I want to put on it, eventually s
 development process :
 
 for my development process I
-Searched: for different apps and what is the basic features in every app 
-wrote : wrote dawon the features I wont for my apps and saerched in different website for the code to understand what I will do when I start my coding.
-designed : designed my app  in Figma then In Android Studio.
-wrote the code : created packges work on database,adapter,viewmodel,fragments and splash .
-run the app : tried to run the app and solved the errors.
+* Searched: for different apps and what is the basic features in every app 
+* wrote : wrote dawon the features I wont for my apps and saerched in different website for the code to understand what I will do when I start my coding.
+* designed : designed my app  in Figma then In Android Studio.
+* wrote the code : created packges work on database,adapter,viewmodel,fragments and splash .
+* run the app : tried to run the app and solved the errors.
 
 
 
