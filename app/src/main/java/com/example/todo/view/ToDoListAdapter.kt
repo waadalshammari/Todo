@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
 import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -47,17 +48,20 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
 
 
 
+          // due date >>>> pass or not
+
         val format = SimpleDateFormat("dd/MM/yyyy")
         var currentDate = Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
         val deadline = format.parse(task.date).toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
 
+         // if the date pass make the title blue else make it black
         if (deadline.isBefore(currentDate)) {
-            holder.titleTextView.setTextColor(Color.BLUE)
+            holder.titleTextView.setTextColor(Color.RED)
         } else {
-            holder.titleTextView.setPaintFlags(0)
             holder.titleTextView.setTextColor(Color.BLACK)
         }
 
+        // check  by the user if task completed or not >> line cross the title
 
         holder.check.setOnClickListener {
             task.check = holder.check.isChecked
@@ -96,6 +100,7 @@ class ToDoListAdapter (val task: List<ToDoListModel>,val viewModel: ToDoListView
         val deletebutton : ImageView = view.findViewById(R.id.delete_button_app_layout)
         val editbutton : ImageView= view.findViewById(R.id.edit_button_app_layout)
         val date : TextView = view.findViewById(R.id.Date)
+
 
     }
 }

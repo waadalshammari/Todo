@@ -21,6 +21,7 @@ class EditFragment : Fragment() {
     private val todolistViewModel: ToDoListViewModel by activityViewModels()
 
     // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
+    // for edit fragment saved data 1
     private lateinit var selectedTask: ToDoListModel
 
     override fun onCreateView(
@@ -33,6 +34,7 @@ class EditFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+       // the edit fragment
 
         val titleEditText: EditText = view.findViewById(R.id.title_edit)
         val desEditText: EditText = view.findViewById(R.id.des_edit)
@@ -40,6 +42,8 @@ class EditFragment : Fragment() {
         val editButton: Button = view.findViewById(R.id.edite_button)
 
         // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
+        // edit fragment saved data 2
+        // live data>>> any changes save it
         todolistViewModel.selectedItemMutableLiveDate.observe(viewLifecycleOwner, {
             it?.let { task ->
 
@@ -59,8 +63,8 @@ class EditFragment : Fragment() {
         if (title.isNotEmpty() && date.isNotEmpty()){
 
         }
-            //todolistViewModel.addItem(title,des, date)
         // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
+        // to open edit fragment with saved data  3
         selectedTask.title = title
         selectedTask.description = des
         selectedTask.date= date
@@ -82,7 +86,7 @@ class EditFragment : Fragment() {
 
             val Date = DatePickerDialog(view.context, DatePickerDialog.OnDateSetListener
             { view, year, month, day ->
-                //TODO year /month /day
+
                 dateedit.text = ("" + day + "/" + (month.toInt() + 1 ).toString() + "/" + year)            }, year, month, day)
             Date.show()
         }

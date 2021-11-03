@@ -17,7 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class Onboarding_listFragment : Fragment() {
 
     private val todolistTask = mutableListOf<ToDoListModel>()
-
+  // activityViewModels >>>> object from  TodolistViewModel
     private val todolistViewModel: ToDoListViewModel by activityViewModels()
 
 
