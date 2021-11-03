@@ -35,7 +35,7 @@ Link to wireframes :
 
 https://www.figma.com/file/fvkg6zhfgL5ADDY2Xxw8Hz/to-do-list?node-id=0%3A1
 
-![image](https://user-images.githubusercontent.com/91456619/140024336-1b1ae83b-bd0f-4a3c-b304-75b566a5d326.png)
+![image](https://user-images.githubusercontent.com/91456619/140025828-b503e7af-cb60-4814-a50c-df348472f205.png)
 ![image](https://user-images.githubusercontent.com/91456619/140024382-8d8c595a-49c2-431e-9b47-91c7d0dc7870.png)
 ![image](https://user-images.githubusercontent.com/91456619/140024399-c6b2e083-903e-4389-8af2-4b7b63ce5395.png)
 ![image](https://user-images.githubusercontent.com/91456619/140024419-65651793-f2f9-438f-a65f-15a301a50349.png)
