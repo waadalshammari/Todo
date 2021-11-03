@@ -1,25 +1,32 @@
+![image](https://user-images.githubusercontent.com/91456619/140022881-600fe4da-4f36-43e7-a8e3-60a494741c78.png)
+
+
+
+
+
 1)list of technologies:
 
 
 
-*used Kotlin for my Android app.
+
+* used Kotlin for my Android app.
 
 
 
 
-*used Android Studio to creat the app.
-
-
-
-
-
-*used Figma to design
+* used Android Studio to creat the app.
 
 
 
 
 
-*different websites for searshing 
+* used Figma to design
+
+
+
+
+
+* different websites for searshing 
 _______________________________________________________________________________________________________________________________________________
 
 
@@ -35,32 +42,32 @@ user stories:
 
 
 
-*As a user I want to add task in organized way
+* As a user I want to add task in organized way
 
 
 
-*As a user I want to be able to  do check my task if it is done
+* As a user I want to be able to  do check my task if it is done or not 
 
 
 
-*As a user I want to add "taskTitle,date and task description" 
+* As a user I want to add "taskTitle,date and task description" 
 
 
 * As a user I want to see all the my task  i add on the main screen. 
 
 
 
-*As a user I want to edit my task "title,description,date" and save the changes. 
+* As a user I want to edit my task "title,description,date" and save the changes. 
 
 
 
 
-*As a user I want see my details of the task.
+* As a user I want see my details of the task.
 
 
 
 
-*As a user I want to delete my task if decide it's not necessary or or if i did it.
+* As a user I want to delete my task if decide it's not necessary or or if i did it.
 
 
 
@@ -70,7 +77,7 @@ user stories:
 
 
 
-* *As a user I want when I click on the task title the details appear.
+* As a user I want when I click on the task title the details appear.
 
 
 
@@ -102,9 +109,9 @@ wrote downe what my app need and what features I want to put on it, eventually s
 development process :
 
 for my development process I
-Searched: for different apps and what is the basic features in eveery app 
-wrote : wrote dawon the features I wont for my apps and saerched in deffernt website for the code to understand what I will do when I start my coding.
-designed : designed my app In Android Studio.
+Searched: for different apps and what is the basic features in every app 
+wrote : wrote dawon the features I wont for my apps and saerched in different website for the code to understand what I will do when I start my coding.
+designed : designed my app  in Figma then In Android Studio.
 wrote the code : created packges work on database,adapter,viewmodel,fragments and splash .
 run the app : tried to run the app and solved the errors.
 
@@ -114,7 +121,7 @@ run the app : tried to run the app and solved the errors.
 
  Problem solving  strategy:
 
-Searched in deffernt website like developer android,youtube,stackoverflow and medium
+Searched in different  website like developer android,youtube,stackoverflow and medium
 asked programmers who have knowledge or Mr. Mohamed and
  Mr.Saad
  
@@ -123,7 +130,15 @@ asked programmers who have knowledge or Mr. Mohamed and
  
  
  
- 4)List unsolved problems which would be fixed in future iterations.
+ 4)List unsolved problems which would be fixed in future iterations:
+ 
+ 
+ 
+ 
+ *  send notification to the user when the due date pass without check the task
+ *  
+ 
+ 
 
 
 
