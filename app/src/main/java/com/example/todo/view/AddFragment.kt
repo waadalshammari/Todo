@@ -44,12 +44,15 @@ class AddFragment : Fragment() {
             val date = dateAdd.text.toString()
 
              // to make sure if empty will not crash
-            if (des.isNotEmpty() && date.isNotEmpty()) {
+            if (des.isNotEmpty() && title.isNotEmpty()) {
 
+                todolistViewModel.addItem(title, des, date)
+                findNavController().popBackStack()
+                // ^^ close screen
+            } else{
+                Toast.makeText(activity, "enter title and description for your task", Toast.LENGTH_SHORT).show()
             }
-            todolistViewModel.addItem(title, des, date)
-            findNavController().popBackStack()
-            // ^^ close screen
+
         }
         // for date Picker to show by click on the date text.
         dateAdd.setOnClickListener {

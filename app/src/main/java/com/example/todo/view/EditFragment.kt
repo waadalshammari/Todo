@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todo.R
@@ -59,9 +60,13 @@ class EditFragment : Fragment() {
         val title = titleEditText.text.toString()
         val des = desEditText.text.toString()
         val date = dateedit.text.toString()
+        if (des.isNotEmpty() && title.isNotEmpty()) {
 
-        if (title.isNotEmpty() && date.isNotEmpty()){
-
+            todolistViewModel.addItem(title, des, date)
+            findNavController().popBackStack()
+            // ^^ close screen
+        } else{
+            Toast.makeText(activity, "enter title and description for your task", Toast.LENGTH_SHORT).show()
         }
         // عشان لما يدخل على صفحه التعديل تطلع له الصفحه القديمه مو جديده
         // to open edit fragment with saved data  3
